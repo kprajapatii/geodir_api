@@ -431,6 +431,9 @@ function geodir_rest_advance_fields_to_schema( $schema, $post_type, $package_id,
                 'default'        => 0,
                 'enum'           => array( 1, 0 ),
                 'items'          => array( 'type' => 'integer' ),
+				'arg_options'	 => array(
+					'validate_callback' => 'geodir_rest_validate_request_arg'
+				)
             );
         }
         
@@ -457,6 +460,9 @@ function geodir_rest_advance_fields_to_schema( $schema, $post_type, $package_id,
                 'default'        => 'custom',
                 'enum'           => array( 'day', 'week', 'month', 'year', 'custom' ),
                 'items'          => array( 'type' => 'string' ),
+				'arg_options'	 => array(
+					'validate_callback' => 'geodir_rest_validate_request_arg'
+				)
             );
             
             $schema['repeat_days'] = array(
@@ -466,6 +472,9 @@ function geodir_rest_advance_fields_to_schema( $schema, $post_type, $package_id,
                 'description'    => __( 'Repeat days' ),
                 'enum'           => array( 1, 2, 3, 4, 5, 6, 0 ),
                 'items'          => array( 'type' => 'integer' ),
+				'arg_options'	 => array(
+					'validate_callback' => 'geodir_rest_validate_request_arg'
+				)
             );
             
             $schema['repeat_weeks'] = array(
@@ -475,6 +484,9 @@ function geodir_rest_advance_fields_to_schema( $schema, $post_type, $package_id,
                 'description'    => __( 'Repeat weeks' ),
                 'enum'           => array( 1, 2, 3, 4, 5 ),
                 'items'          => array( 'type' => 'integer' ),
+				'arg_options'	 => array(
+					'validate_callback' => 'geodir_rest_validate_request_arg'
+				)
             );
             
             $schema['event_recurring_dates'] = array(
@@ -498,6 +510,9 @@ function geodir_rest_advance_fields_to_schema( $schema, $post_type, $package_id,
                 'enum'           => $repeat_x,
                 'default'        => 1,
                 'items'          => array( 'type' => 'integer' ),
+				'arg_options'	 => array(
+					'validate_callback' => 'geodir_rest_validate_request_arg'
+				)
             );
             
             $schema['duration_x'] = array(
@@ -516,6 +531,9 @@ function geodir_rest_advance_fields_to_schema( $schema, $post_type, $package_id,
                 'default'        => 0,
                 'enum'           => array( 1, 0 ),
                 'items'          => array( 'type' => 'integer' ),
+				'arg_options'	 => array(
+					'validate_callback' => 'geodir_rest_validate_request_arg'
+				)
             );
             
             $schema['max_repeat'] = array(
@@ -543,6 +561,9 @@ function geodir_rest_advance_fields_to_schema( $schema, $post_type, $package_id,
             'default'        => 0,
             'enum'           => array( 1, 0 ),
             'items'          => array( 'type' => 'integer' ),
+			'arg_options'	 => array(
+				'validate_callback' => 'geodir_rest_validate_request_arg'
+			)
         );
         
         $schema['starttime'] = array(
@@ -569,6 +590,9 @@ function geodir_rest_advance_fields_to_schema( $schema, $post_type, $package_id,
                 'default'        => 0,
                 'enum'           => array( 1, 0 ),
                 'items'          => array( 'type' => 'integer' ),
+				'arg_options'	 => array(
+					'validate_callback' => 'geodir_rest_validate_request_arg'
+				)
             );
             
             $schema['starttimes'] = array(
@@ -623,6 +647,9 @@ function geodir_rest_advance_fields_to_schema( $schema, $post_type, $package_id,
             'default'        => '0',
             'enum'           => array( '1', '0' ),
             'items'          => array( 'type' => 'integer' ),
+			'arg_options'	 => array(
+				'validate_callback' => 'geodir_rest_validate_request_arg'
+			)
         );
     }
     

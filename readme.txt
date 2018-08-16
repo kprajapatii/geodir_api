@@ -3,7 +3,7 @@ Contributors: stiofansisland
 Donate link: http://wpgeodirectory.com/
 Tags: business directory plugin, business-directory, businesses, directories, directory, directory plugin, api, rest api
 Requires at least: 4.7
-Tested up to: 4.9.2
+Tested up to: 4.9.8
 Stable tag: 0.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -30,7 +30,8 @@ Add category icon & default image in category response - CHANGED
 Sort by event start date not working - FIXED
 GD user favs function updated - CHANGED
 Keyword should be searched in terms - CHANGED
-Review submit issue when multirating not installed - FIXED 
+Review submit issue when multirating not installed - FIXED
+Boolean value not validated during POST submit - FIXED
 
 = 0.0.3 =
 Fail to get reviews when review rating addon not installed - FIXED
